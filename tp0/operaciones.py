@@ -164,7 +164,11 @@ def leer_pixel(
     
     arr = qimage_a_numpy(imagen)
 
-    return tuple(map(int, arr[y, x, :3]))
+    rojo = int(arr[y, x, 0])
+    verde = int(arr[y, x, 1])
+    azul = int(arr[y, x, 2])
+
+    return rojo, verde, azul
 
 # 3b) MODIFICAR EL COLOR DE UN PIXEL
 #     -> botón "Modificar pixel"
